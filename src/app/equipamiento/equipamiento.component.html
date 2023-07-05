@@ -1,0 +1,66 @@
+<!-- Llamada al componente inicio-usuario -->
+<app-inicio-usuario></app-inicio-usuario>
+<div>
+    <h1>Equipamiento y Mobiliario</h1>
+    <!-- Aquí puedes agregar el contenido específico de la página -->
+
+    <div>
+        <form #equipamientoForm="ngForm" (ngSubmit)="submitForm(equipamientoForm)">
+          <label for="filtro_edificio">Filtrar por edificio de la facultad:</label><br>
+    <select id="filtro_edificio" name="filtro_edificio">
+        <option value="edificio1">Ciencias de la Educación</option>
+        <option value="edificio2">Psicología</option>
+        <option value="edificio3">Trabajo Social</option>
+        <option value="edificio4">Ciencias Comunicacion</option>
+        <option value="edificio5">Derecho</option>
+        <option value="edificio6">Contabilidad y Auditoría</option>
+        <option value="edificio7">Ingeniería Industrial</option>
+        <option value="edificio8">Ciencias Economicas</option>
+        <option value="edificio9">Ciencias Médicas</option>
+        <option value="edificio10">Ciencias Informáticas</option>
+        <option value="edificio11">Ingeniería</option>
+        <option value="edificio12">Ciencias Agropecuarias</option>
+        <option value="edificio13">Ingeniería Industrial</option>
+        <option value="edificio14">Arquitectura</option>
+        <option value="edificio15">Ciencias Médicas</option>
+        <option value="edificio16">Odontología</option>
+        <!-- Agrega más opciones de edificios según tus necesidades -->
+    </select><br><br>
+
+    <label for="filtro_mobiliario">Filtrar por nombre de mobiliario:</label><br>
+    <select id="filtro_mobiliario" name="filtro_mobiliario">
+        <option value="mobiliario1">Escritorios</option>
+        <option value="mobiliario2">Sillas</option>
+        <option value="mobiliario3">Mesas de estudio</option>
+        <option value="mobiliario4">Pizarras</option>
+        <option value="mobiliario5">Estanterías</option>
+        <option value="mobiliario6">Armarios o taquillas</option>
+        <option value="mobiliario7">Proyectores</option>
+        <option value="mobiliario8">Computadoras</option>
+        <option value="mobiliario9">Laptops</option>
+        <option value="mobiliario10">Aires</option>
+        <option value="mobiliario11">Bancos de trabajo</option>
+        <!-- Agrega más opciones de mobiliario según tus necesidades -->
+    </select><br><br>
+
+    <label for="cantidad_mobiliario">Cantidad Mobiliario:</label><br>
+    <input type="text" id="cantidad_mobiliario" name="cantidad_mobiliario" required
+      [(ngModel)]="cantidadMobiliario" #cantidadMobiliarioInput="ngModel" 
+      pattern="^[0-9]{1,5}$" title="Ingresa solo números de hasta 5 cifras"><br>
+    <div *ngIf="cantidadMobiliarioInput.invalid && cantidadMobiliarioInput.touched">
+        <div *ngIf="cantidadMobiliarioInput?.errors?.['required']">La cantidad de mobiliario es requerida.</div>
+        <div *ngIf="cantidadMobiliarioInput?.errors?.['pattern']">INGRESA SOLO NÚMEROS DE HASTA 5 CIFRAS.</div>
+    </div><br>
+
+    <label for="mantenimiento">Mantenimiento:</label><br>
+    <textarea id="mantenimiento" name="mantenimiento" rows="4" cols="50" required
+      [(ngModel)]="mantenimiento" #mantenimientoInput="ngModel"
+      maxlength="200" title="Ingresa máximo 200 caracteres"></textarea><br>
+    <div *ngIf="mantenimientoInput.invalid && mantenimientoInput.touched">
+        <div *ngIf="mantenimientoInput?.errors?.['required']">El mantenimiento es requerido.</div>
+    </div><br>
+
+    <input type="submit" value="Guardar">
+  </form>
+</div>
+

@@ -1,0 +1,11 @@
+<app-inicio-usuario></app-inicio-usuario>
+
+<div class="contenedor-cuadros">
+  <div class="cuadro" *ngFor="let cuadro of cuadros">
+    <h2><a href="FACULTAD.php">{{ cuadro.facultad }}</a></h2>
+    <img [src]="cuadro.imagen" alt="Imagen de {{ cuadro.facultad }}" class="imagen-facultades">
+    <ul>
+      <li *ngFor="let edificio of cuadro.edificios">{{ edificio }}</li>
+    </ul>
+  </div>
+</div>

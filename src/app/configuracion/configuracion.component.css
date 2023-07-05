@@ -1,0 +1,67 @@
+/*EDITAR USUARIO */
+
+
+.EDITAR-USUARIO {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #89f080; /* Cambia el color a tu preferencia */
+    margin-top: 50px; /* Agregar margen en la parte superior */
+  }
+  
+  .EDITAR-USUARIO h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #e64646;
+  }
+  
+  .EDITAR-USUARIO label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .EDITAR-USUARIO select, input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .EDITAR-USUARIO  select:focus, input:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  .EDITAR-USUARIO input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .EDITAR-USUARIO  input[type="submit"]:hover {
+    background-color: #f30000;
+  }
+  
+  .EDITAR-USUARIO #campo-usuario, #campo-contra, #campo-nombrescompletos, #campo-email, #campo-telefono, #campo-direccion {
+    display: none;
+  }
+  
+  .EDITAR-USUARIO img {
+    display: block; /* Convertir en bloque */
+    margin: 0 auto; /* Centrar en la página */
+    max-width: 200px; /* Ancho máximo */
+    width: 100%; /* Ancho del elemento */
+    height: auto; /* Altura automática */
+    margin-bottom: 20px; /* Espacio inferior */
+  }

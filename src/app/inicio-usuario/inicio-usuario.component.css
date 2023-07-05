@@ -1,0 +1,187 @@
+
+/* Estilos para el header */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #89d87f;
+  height: 80px;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el logo */
+.logo {
+  max-width: 200px; /* Establece el ancho máximo de la imagen en 200 píxeles */
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+  margin: 0 20px;
+  flex-grow: 1; /* Añade esta línea para que ocupe todo el espacio disponible */
+}
+
+.search-bar form {
+  display: flex;
+}
+
+.search-bar input[type="search"] {
+  border: none;
+  flex-grow: 1; /* Añade esta línea */
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+
+
+.search-bar button[type="button"] {
+  background-color: #ddd;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 0px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+/* Estilos para el menú */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+
+}
+nav ul li:hover > a {
+  background-color: #4CAF50; /* Establece un fondo cuando se pasa el cursor sobre un elemento de lista principal */
+}
+
+nav > ul > li > a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+nav > ul > li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+nav ul ul li {
+  display: block;
+}
+
+nav ul ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+}
+
+nav ul ul li a:hover {
+  background-color: #f7f7f7;
+  color: red;
+}
+/*ESTILOS PARA LOS CUADRADOS DE LAS FACULTADES*/
+
+.contenedor-cuadros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; /* Establece el índice z del contenedor de los cuadros */
+  background-color: rgba(0, 0, 255, 0.171);
+}
+
+.cuadro {
+  background-color: #89d87f;
+  width: calc(33.33% - 10px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative; /* Añadido para posicionar correctamente la imagen */
+  
+}
+.imagen-facultades {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.4; /* Ajusta la opacidad de la imagen */
+  border-radius: 50%; /* Hace la imagen redonda */
+  width: 320px;
+  height: 320px;
+  z-index: 1; /* Mueve la imagen detrás del contenido */
+}
+.cuadro h2,
+.cuadro ul {
+  position: relative;
+  z-index: 2; /* Asegura que el contenido se muestre en frente de la imagen */
+}
+
+.cuadro h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+.cuadro h2 a {
+  text-decoration: none;
+  color: black;
+}
+.cuadro h2 a:hover {
+  color: rgb(236, 19, 19);
+}
+.cuadro ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cuadro ul li {
+  margin-bottom: 5px;
+}
+
+/* Añadir una nueva fila */
+.contenedor-cuadros:nth-child(2) .cuadro {
+  margin-top: 20px;
+}
+
+/* Eliminar el margen derecho del último cuadro de cada fila */
+.cuadro:nth-child(3n) {
+  margin-right: 0;
+}

@@ -1,0 +1,36 @@
+<app-inicio-usuario></app-inicio-usuario>
+<div class="EDITAR-USUARIO">
+  <form (ngSubmit)="validarRes()">
+    <h1><img src="assets/USUARIO.png" alt="nombre de la imagen">Configuración Cuenta</h1>
+    <label for="opcion">Seleccione una opción:</label>
+    <select id="opcion" name="opcion" [(ngModel)]="opcionSeleccionada">
+      <option value="usuario">Editar usuario</option>
+      <option value="contra">Editar contraseña</option>
+      <option value="nombrescompletos">Editar nombres y apellidos</option>
+      <option value="email">Editar correo electrónico</option>
+      <option value="telefono">Editar teléfono</option>
+      <option value="direccion">Editar dirección</option>
+    </select>
+    <div [ngSwitch]="opcionSeleccionada">
+      <div *ngSwitchCase="'usuario'">
+        <input type="text" name="usuario" placeholder="Nuevo usuario">
+      </div>
+      <div *ngSwitchCase="'contra'">
+        <input type="password" name="contra" placeholder="Nueva contraseña">
+      </div>
+      <div *ngSwitchCase="'nombrescompletos'">
+        <input type="text" name="nombrescompletos" placeholder="Nuevos nombres y apellidos">
+      </div>
+      <div *ngSwitchCase="'email'">
+        <input type="email" name="email" placeholder="Nuevo correo electrónico">
+      </div>
+      <div *ngSwitchCase="'telefono'">
+        <input type="tel" name="telefono" placeholder="Nuevo teléfono">
+      </div>
+      <div *ngSwitchCase="'direccion'">
+        <input type="text" name="direccion" placeholder="Nueva dirección">
+      </div>
+    </div>
+    <input type="submit" name="register">
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<form (ngSubmit)="iniciarSesion()">
+  <h1><img src="assets/logouleam.png" alt="nombre de la imagen"> Gestión activos fijos</h1>
+
+  <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario" placeholder="Usuario" required>
+
+  <input type="password" id="contrasena" name="contrasena" [(ngModel)]="contrasena" placeholder="Contraseña" required>
+  <a routerLink="/registro" class="boton-crear-cuenta">Crear cuenta nueva</a>
+  <input type="submit" name="register">
+  
+</form>

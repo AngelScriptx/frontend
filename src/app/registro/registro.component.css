@@ -1,0 +1,102 @@
+body {
+    background-color: #ffffff;/* Establece el color de fondo del cuerpo de la página en blanco */
+    font-family: Arial, sans-serif;/* Establece la familia de fuentes utilizada para todo el cuerpo de la página */
+  }
+  
+  form {
+    background-color: #ffffff;/* Establece el color de fondo del formulario en blanco */
+    border-radius: 10px;/* Establece la esquina redondeada de 10px para el formulario */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);/* Establece la sombra de 10px para el formulario */
+    padding: 20px;/* Establece el espacio de relleno interno de 20px para el formulario */
+    position: absolute; /* Establece la posición del formulario como absoluta */
+  top: 50%; /* Ubica el formulario en la mitad superior de la ventana */
+  left: 50%; /* Ubica el formulario en el centro horizontal de la ventana */
+  transform: translate(-50%, -50%); /* Centra el formulario en ambos ejes */
+  width: 100%; /* Ajusta el ancho del formulario al ancho disponible */
+  }
+  
+  h1 {
+    color: #333;/* Establece el color del texto del encabezado en #333 (un tono oscuro de gris) */
+    font-size: 24px; /* Establece el tamaño de fuente del encabezado en 24px */
+    text-align: center;/* Centra el texto del encabezado horizontalmente en la página */
+    margin-bottom: 20px;/* Establece el margen inferior del encabezado en 20px */
+  }
+  
+  /* Estilos para el cuerpo de la página */
+body {
+    background-color: #89d87f; /* Color de fondo */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+  }
+  
+  /* Estilos para el formulario */
+  form {
+    background-color: #ffffff; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    max-width: 400px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar en la página */
+    padding: 20px; /* Espacio interno */
+  }
+  
+  /* Estilos para el título del formulario */
+  h1 {
+    color: #333; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente */
+    text-align: center; /* Alineación del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  /* Estilos para la imagen */
+  img {
+      display: block; /* Convertir en bloque */
+      margin: 0 auto; /* Centrar en la página */
+      max-width: 200px; /* Ancho máximo */
+      width: 100%; /* Ancho del elemento */
+      height: auto; /* Altura automática */
+      margin-bottom: 20px; /* Espacio inferior */
+    }
+  
+  /* Estilos para los campos de texto y contraseña */
+    input[type="text"],
+    input[type="password"], 
+    input[type="tel"],
+    input[type="email"]{
+      border: none; /* Sin borde */
+      text-align: center; /* Alineación del texto */
+      border-radius: 5px; /* Borde redondeado */
+      display: block; /* Convertir en bloque */
+      font-size: 16px; /* Tamaño de fuente */
+      margin-bottom: 10px; /* Espacio inferior */
+      padding: 10px; /* Espacio interno */
+      width: 90%; /* Ancho del elemento */
+      background-color: #e3f0e7; /* Color de fondo */
+      margin-left: 3%; /* Margen a la izquierda */
+    }
+  
+  /* Estilos para el botón de enviar */
+  input[type="submit"] {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    color: #fff; /* Color del texto */
+    cursor: pointer; /* Cursor al pasar */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px; /* Espacio interno */
+    width: 100%; /* Ancho del elemento */
+    margin-top: 10px; /* Espacio superior */
+  }
+  .boton-crear-cuenta {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4CAF50; /* Cambiar el color del texto a rojo */
+  }
+  .boton-crear-cuenta:hover {
+    color: #f30000;  /* Color al pasar el cursor */
+  }
+  
+  /* Estilos para el botón de enviar al pasar el cursor */
+  input[type="submit"]:hover {
+    background-color: #f30000; /* Color de fondo */
+  }
+  

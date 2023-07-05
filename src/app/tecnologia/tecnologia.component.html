@@ -1,0 +1,117 @@
+<app-inicio-usuario></app-inicio-usuario>
+<div>
+    <div>
+    <h2>Lista de Tecnología</h2>
+    <img src="assets/tecnologias.png" alt=" Imagen Tecnogia">
+</div>
+ <!-- Formulario de búsqueda -->
+ <form class="search-form">
+    <select id="filtroEdificio" name="filtroEdificio" [(ngModel)]="filtroEdificio" required>
+      <option value="">Seleccionar</option>
+      <option value="Ciencias de la Educación">Ciencias de la Educación</option>
+      <option value="Psicología">Psicología</option>
+      <option value="Trabajo Social">Trabajo Social</option>
+      <option value="Ciencias Comunicacion">Ciencias Comunicacion</option>
+      <option value="Derecho">Derecho</option>
+      <option value="Contabilidad y Auditoría">Contabilidad y Auditoría</option>
+      <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+      <option value="Ciencias Economicas">Ciencias Economicas</option>
+      <option value="Ciencias Médicas">Ciencias Médicas</option>
+      <option value="Ciencias Informáticas">Ciencias Informáticas</option>
+      <option value="Ingeniería">Ingeniería</option>
+      <option value="Ciencias Agropecuarias">Ciencias Agropecuarias</option>
+      <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+      <option value="Arquitectura">Arquitectura</option>
+      <option value="Ciencias Médicas">Ciencias Médicas</option>
+      <option value="Odontología">Odontología</option>
+      <!-- Agrega más opciones según tus necesidades -->
+    </select>
+   
+    <select id="filtroActivo" name="filtroActivo" [(ngModel)]="filtroActivo" required>
+      <option value="">Seleccionar</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Proyector">Proyector</option>
+      <option value="Computadora">Computadora</option>
+      <option value="Aire">Aire</option>
+      
+      <!-- Agrega más opciones según tus necesidades -->
+    </select>
+    <button (click)="mostrarFormulario()">Agregar Aparato</button>
+  </form>
+ 
+  <div *ngIf="mostrarNuevoFormulario">
+    <!-- Campos del formulario para el nuevo aparato tecnológico -->
+    <form (submit)="enviarFormulario()">
+        <label for="edificio">Edificio:</label>
+        <select id="edificio" name="edificio" [(ngModel)]="nuevoEdificio" required>
+          <option value="Ciencias de la Educación">Ciencias de la Educación</option>
+          <option value="Psicología">Psicología</option>
+          <option value="Trabajo Social">Trabajo Social</option>
+          <option value="Ciencias Comunicacion">Ciencias Comunicacion</option>
+          <option value="Derecho">Derecho</option>
+          <option value="Contabilidad y Auditoría">Contabilidad y Auditoría</option>
+          <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+          <option value="Ciencias Economicas">Ciencias Economicas</option>
+          <option value="Ciencias Médicas">Ciencias Médicas</option>
+          <option value="Ciencias Informáticas">Ciencias Informáticas</option>
+          <option value="Ingeniería">Ingeniería</option>
+          <option value="Ciencias Agropecuarias">Ciencias Agropecuarias</option>
+          <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+          <option value="Arquitectura">Arquitectura</option>
+          <option value="Ciencias Médicas">Ciencias Médicas</option>
+          <option value="Odontología">Odontología</option>
+          <!-- Agrega más opciones según tus necesidades -->
+        </select>
+    
+        <label for="activo">Activo:</label>
+        <select id="activo" name="activo" [(ngModel)]="nuevoActivo" required>
+          <option value="">Seleccionar</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Proyector">Proyector</option>
+          <option value="Computadora">Computadora</option>
+          <!-- Agrega más opciones según tus necesidades -->
+        </select>
+    
+        <label for="marca">Marca:</label>
+    <input type="text" id="marca" name="marca" [(ngModel)]="nuevaMarca" required>
+
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" name="modelo" [(ngModel)]="nuevoModelo" required>
+
+    <label for="serie">Número de Serie:</label>
+    <input type="text" id="serie" name="serie" [(ngModel)]="nuevoSerie" required>
+
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" name="estado" [(ngModel)]="nuevoEstado" required>
+
+    <button type="submit">ENVIAR</button>
+      </form>
+  </div>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Edificio</th>
+          <th>Activo</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Número de Serie</th>
+          <th>Estado</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tecnologia of tecnologias | filtrotecnologia:filtroEdificio:filtroActivo">
+            <td>{{ tecnologia.edificio }}</td>
+            <td>{{ tecnologia.activo }}</td>
+            <td>{{ tecnologia.marca }}</td>
+            <td>{{ tecnologia.modelo }}</td>
+            <td>{{ tecnologia.serie }}</td>
+            <td>{{ tecnologia.estado }}</td>
+            <td><button (click)="eliminarTecno(tecnologia)">Eliminar</button></td>
+          </tr>
+        <!-- Agrega más filas según los activos de tecnología -->
+      </tbody>
+    </table>
+</div>

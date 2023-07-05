@@ -1,0 +1,86 @@
+div {
+  margin: 20px;
+  text-align: center; /* Centrar contenido horizontalmente */
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-form label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.search-form input[type="text"],
+.search-form select {
+  width: 200px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-results h2 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #4CAF50;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: inline-block; /* Mostrar el título en línea */
+  margin-bottom: 50px;
+}
+
+img {
+  display: inline-block; /* Mostrar la imagen en línea */
+  width: 150px; /* Ajustar el tamaño de la imagen */
+  margin-left: 10px; /* Agregar un margen izquierdo para separar la imagen del título */
+  margin-bottom: -60px; /* Ajustar el margen inferior para alinear con el título */
+  border-radius: 10px; /* Hacer las esquinas de la imagen más redondas */
+  opacity: 0.8; /* Aplicar un efecto de transparencia (0.0 a 1.0) */
+}

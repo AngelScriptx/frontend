@@ -1,0 +1,33 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  /*ESTILOS PARA LOS EDIFICIOS */
+  .EDIFICIO {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 5px #aaa;
+    width: 200px;
+    background-color: #f2f2f2; /* Agrega el color de fondo deseado */
+  }
+  
+  .EDIFICIO img {
+    width: 200px; /* ajusta el ancho según tus necesidades */
+    height: 100px; /* ajusta la altura según tus necesidades */
+    border: 10px solid #54e27a;
+  }
+    /* Estilos CSS para el elemento h1 */
+    .EDIFICIO h1 {
+      color: black; /* Color inicial del texto */
+      cursor: default; /* Cursor inicial */
+    }
+  
+    /* Estilos CSS al pasar el cursor sobre el elemento h1 */
+    .EDIFICIO h1:hover {
+      color: red; /* Color del texto al pasar el cursor */
+      cursor: pointer; /* Cursor de la mano */
+    }
+  

@@ -1,0 +1,16 @@
+<app-inicio-usuario></app-inicio-usuario>
+<div class="formularioEdificio">
+    <img [src]="rutaImagen" alt="Imagen del edificio">
+    <form *ngIf="edificio" (submit)="enviarFormulario()">
+      <label>ID del edificio: {{ edificioId }}</label><br>
+      <label>Descripción:</label>
+      <input type="text" name="descripcion" [(ngModel)]="edificio.descripcion"><br>
+      <label>Valor $:</label>
+      <input type="text" name="valor" [(ngModel)]="edificio.valor"><br>
+      <label>Depreciación:</label>
+      <input type="text" name="depreciacion" [(ngModel)]="edificio.depreciacion"><br>
+      <label>Mantenimiento:</label>
+      <input type="text" name="mantenimiento" [(ngModel)]="edificio.mantenimiento"><br>
+      <input type="submit" value="Enviar">
+    </form>
+</div>

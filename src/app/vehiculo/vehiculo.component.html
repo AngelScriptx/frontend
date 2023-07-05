@@ -1,0 +1,61 @@
+<app-inicio-usuario></app-inicio-usuario>
+<div>
+  <div>
+    <h2>Lista de Vehículos</h2>
+    <img src="assets/bus.png" alt=" Imagen uleam">
+</div>
+  <!-- Formulario de búsqueda -->
+  <form (ngSubmit)="agregarVehiculo()">
+    <label for="buscarPlaca">Placa:</label>
+    <input type="text" id="buscarPlaca" name="buscarPlaca" [(ngModel)]="filtroPlaca" required>
+    <label for="buscarMarca">Marca:</label>
+    <select id="buscarMarca" name="buscarMarca" [(ngModel)]="filtroMarca" required>
+      <option value="">Seleccionar</option>
+      <option value="Toyota">Toyota</option>
+      <option value="Honda">Honda</option>
+      <option value="Chevrolet">Chevrolet</option>
+      <!-- Agrega más opciones según tus necesidades -->
+    </select>
+    <label for="buscarModelo">Modelo:</label>
+    <input type="text" id="buscarModelo" name="buscarModelo" [(ngModel)]="filtroModelo" required>
+    <label for="buscarAnio">Año:</label>
+    <input type="text" id="buscarAnio" name="buscarAnio" [(ngModel)]="filtroAnio" required>
+    <label for="buscarColor">Color:</label>
+    <select id="buscarColor" name="buscarColor" [(ngModel)]="filtroColor" required>
+      <option value="">Seleccionar</option>
+      <option value="Blanco">Blanco</option>
+      <option value="Negro">Negro</option>
+      <option value="Rojo">Rojo</option>
+      <!-- Agrega más opciones según tus necesidades -->
+    </select>
+    <button type="submit">Agregar</button>
+  </form>
+  
+
+  <!-- Resultados de búsqueda -->
+  <div>
+    <h2>Resultados de búsqueda</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Placa</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Año</th>
+          <th>Color</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehiculo of vehiculos | filtroVehiculos:filtroPlaca:filtroMarca:filtroModelo:filtroAnio:filtroColor">
+          <td>{{ vehiculo.Placa }}</td>
+          <td>{{ vehiculo.Marca }}</td>
+          <td>{{ vehiculo.Modelo }}</td>
+          <td>{{ vehiculo.Anio }}</td>
+          <td>{{ vehiculo.Color }}</td>
+          <td><button (click)="eliminarVehiculo(vehiculo)">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div *ngIf="verificarSesion()">
+  <header>
+    <div class="logo">
+      <a><img src="assets/logouleam.png" alt="Logo de la empresa"></a>
+    </div>
+    <nav class="items">
+      <ul>
+        <li><a routerLink="/facultades">Facultades</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <form>
+        <input type="search" placeholder="Buscar Facultad..." name="buscar"[(ngModel)]="filtroBusqueda">
+        <button type="button" (click)="buscarFacultad()">Buscar</button>
+        <button type="button" (click)="resetearBusqueda()">Limpiar</button>
+      </form>
+    </div>
+    <nav class="items">
+      <ul>
+        <li><a>Activos Fijos</a>
+          <ul>
+            <li><a routerLink="/edificios-estructuras">Edificios y estructuras</a></li>
+            <li><a routerLink="/equipamiento">Equipamiento y mobiliario</a></li>
+            <li><a routerLink="/vehiculo">Vehículos</a></li>
+            <li><a routerLink="/tecnologia">Tecnología</a></li>
+          </ul>
+        </li>
+        <li><a>{{ usuarioAutenticado.nombreCompleto }}</a>
+          <ul>
+            <li><a routerLink="/configuracion">Configuración</a></li>
+            <li><a (click)="cerrarSesion()">Salir</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div  class="contenedor-cuadros" *ngIf="cuadrosFiltrados.length > 0">
+    <div  class="cuadro" *ngFor="let cuadro of cuadrosFiltrados">
+      <h2><a href="FACULTAD.php">{{ cuadro.facultad }}</a></h2>
+      <img [src]="cuadro.imagen" alt="Imagen de {{ cuadro.facultad }}" class="imagen-facultades">
+      <ul>
+        <li *ngFor="let edificio of cuadro.edificios">{{ edificio }}</li>
+      </ul>
+      <!-- Resto del contenido del cuadro -->
+    </div>
+  </div>
+</div>

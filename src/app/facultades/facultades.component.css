@@ -1,0 +1,74 @@
+/*ESTILOS PARA LOS CUADRADOS DE LAS FACULTADES*/
+
+.contenedor-cuadros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Establece el índice z del contenedor de los cuadros */
+    background-color: #d3cece;
+  }
+  
+  .cuadro {
+    background-color: #89d87f;
+    width: calc(33.33% - 10px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    position: relative; /* Añadido para posicionar correctamente la imagen */
+    
+  }
+  .imagen-facultades {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4; /* Ajusta la opacidad de la imagen */
+    border-radius: 50%; /* Hace la imagen redonda */
+    width: 320px;
+    height: 320px;
+    z-index: 1; /* Mueve la imagen detrás del contenido */
+  }
+  .cuadro h2,
+  .cuadro ul {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido se muestre en frente de la imagen */
+  }
+  
+  .cuadro h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    
+  }
+  .cuadro h2 a {
+    text-decoration: none;
+    color: black;
+  }
+  .cuadro h2 a:hover {
+    color: rgb(236, 19, 19);
+  }
+  .cuadro ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cuadro ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Añadir una nueva fila */
+  .contenedor-cuadros:nth-child(2) .cuadro {
+    margin-top: 20px;
+  }
+  
+  /* Eliminar el margen derecho del último cuadro de cada fila */
+  .cuadro:nth-child(3n) {
+    margin-right: 0;
+  }
+  
